@@ -3,8 +3,8 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
@@ -15,4 +15,104 @@ body {
 img {
   display: block;
   max-width: 100%;
+}
+
+.timer {
+  display: flex;
+
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  height: max-content;
+  border: dashed 1.5px #80cbc4;
+  border-radius: 12px;
+
+  background-color: #fff;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 75px;
+  padding: 5px;
+
+  background-color: #3f4458;
+  color: #fff;
+  border: 2px solid #646c8c;
+  border-radius: 4px;
+}
+
+.field:not(:last-child) {
+  margin-right: 20px;
+}
+
+.value {
+  font-size: 40px;
+}
+
+.label {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.input-container {
+  display: flex;
+  width: max-content;
+
+  margin: 0 auto;
+}
+
+.start-button {
+  margin-left: 20px;
+  width: 110px;
+  height: 40px;
+
+  font-size: 16px;
+
+  color: #fff;
+  background-color: #3f4458;
+  border: solid 1px black;
+  border-radius: 4px;
+}
+
+.start-button:hover {
+  background-color: #646c8c;
+  cursor: pointer;
+}
+.start-button:active {
+  background-color: #80cbc4;
+  opacity: 0.8;
+}
+
+button#start-button:disabled {
+  background-color: #80cbc4;
+  opacity: 1;
+  color: rgba(16, 16, 16, 0.3);
+  border-color: rgba(118, 118, 118, 0.5);
+
+  cursor: inherit;
+}
+
+#datetime-picker {
+  text-align: center;
+
+  font-size: 18px;
+  color: rgb(63, 68, 88);
+}
+
+.container {
+  width: max-content;
+  padding: 15px;
+  margin: 0 auto;
+
+  background-color: #d9ead3;
+  border: dashed 2px #3f4458;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 1), -23px 0 20px -23px rgba(0, 0, 0, 0.8),
+    23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
