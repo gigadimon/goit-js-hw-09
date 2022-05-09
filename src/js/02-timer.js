@@ -19,9 +19,12 @@ const options = {
   defaultDate: new Date(),
   disableMobile: true,
   minuteIncrement: 1,
-  onChange() {
-    /* При изменении даты: ресетим контент таймера(можно и не ресетить, но так логичнее, как по мне :D), сбрасывает слушателя события и 
+  onChange(selectedDates) {
+    /* При изменении даты на корректную: ресетим контент таймера(можно и не ресетить, но так логичнее, как по мне :D), сбрасывает слушателя события и 
     очищаем интервал, чтобы можно было запускать таймер заново на новую дату, не перезагружая страницу */
+    if (selectedDates[0].getTime() <= Date.now()) {
+      return;
+    }
     resetContent(daysContent);
     resetContent(hoursContent);
     resetContent(minutesContent);
